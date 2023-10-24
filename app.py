@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 from __future__ import annotations
+from openxlab.model import download
+download(model_repo='Latent-Consistency-Model/LCM_Dreamshaper_v7_4k.safetensors', model_name='LCM_Dreamshaper_v7_4k.safetensors')
 
 import os
 import random
