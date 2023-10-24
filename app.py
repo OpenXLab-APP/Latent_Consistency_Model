@@ -161,9 +161,6 @@ with gr.Blocks(css="style.css") as demo:
                 value=4,
                 visible=False,
             )
-
-    with gr.Accordion("Past generations", open=False):
-        gr_user_history.render()
     
     gr.Examples(
         examples=examples,
