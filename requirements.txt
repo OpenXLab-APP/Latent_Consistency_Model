@@ -1,5 +1,6 @@
 accelerate
 diffusers
+torch==2.0.0
 gradio==3.48.0
 Pillow
 --extra-index-url https://download.pytorch.org/whl/cu118
