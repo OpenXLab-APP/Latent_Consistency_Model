@@ -10,6 +10,9 @@ import time
 import gradio as gr
 import numpy as np
 import PIL.Image
+
+pip install --upgrade pip
+pip install torch==2.0.0
 import torch
 
 from diffusers import DiffusionPipeline
