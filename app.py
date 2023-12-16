@@ -38,7 +38,8 @@ USE_TORCH_COMPILE = os.getenv("USE_TORCH_COMPILE") == "1"
 DTYPE = torch.float32  # torch.float16 works as well, but pictures seem to be a bit worse
 
 pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7", custom_pipeline="latent_consistency_txt2img", custom_revision="main")
-pipe.to(torch_device="cuda", torch_dtype=DTYPE)
+pipe = DiffusionPipeline.from_pretrained("SimianLuo/LCM_Dreamshaper_v7")
+pipe.to(torch_device="cuda:0", torch_dtype=DTYPE)
 
 
 def randomize_seed_fn(seed: int, randomize_seed: bool) -> int:
